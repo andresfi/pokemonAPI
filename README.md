@@ -1,27 +1,38 @@
 # PokedexApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+Instrucciones para Ejecutar el Proyecto Localmente
 
-## Development server
+El desarrollo fue realizado con las siguientes versiones:
+•	Node.js: v20.17.0
+•	Angular CLI: v18.2.6
+•	NPM: v6.14.10
+---------------------------------------------------------------------------
+Instalación:
+1-	Clonar el repositorio del proyecto a tu máquina local:
+https://github.com/andresfi/pokemonAPI.git
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2-	Navegar a la carpeta del proyecto
+cd pokeapi-angular-app
 
-## Code scaffolding
+3-	Instalar las dependencias necesarias:
+npm install
+---------------------------------------------------------------------------
+Ejecución: 
+Para ejecutar el proyecto en modo de desarrollo, utiliza el siguiente comando en la terminal:
+ng serve --open  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+La aplicación se iniciará en http://localhost:4200
 
-## Build
+Generación para Producción:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para generar los archivos de distribución del proyecto para producción:
+ng build –prod
 
-## Running unit tests
+Esto generará los archivos compilados en la carpeta dist/.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---------------------------------------------------------------------------
+Enlaces:
+Video DEMO: https://youtu.be/LrmtprfCDZ0
+Enlace a repositorio de Github: https://github.com/andresfi/pokemonAPI.git
+Enlace a una versión en vivo: https://poke-api-anlopezju.netlify.app/home
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
