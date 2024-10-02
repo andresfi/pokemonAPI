@@ -1,0 +1,51 @@
+<div *ngIf="name" class="container-Detail">
+    <!-- Contenedor de la cabecera -->
+    <div class="header-Detail">
+        <div class="image-container">
+            <img src="{{ urlImage }}">
+        </div>
+        <div>
+            <p class="pokemon-name">{{ name | titlecase }}</p>
+        </div>
+    </div>
+
+    <!-- Contenedor de estadísticas -->
+    <div *ngIf="attack && defense">
+        <div class="section-title">Estadísticas</div>
+        <div class="stat-bar-container">
+            <span>Ataque:</span>
+            <div class="stat-bar">
+                <div class="stat-bar-fill attack-bar" [ngStyle]="{ width: attack + '%' }"></div>
+                <span class="stat-value">{{ attack }}</span>
+            </div>
+        </div>
+
+        <div class="stat-bar-container">
+            <span>Defensa:</span>
+            <div class="stat-bar">
+                <div class="stat-bar-fill defense-bar" [ngStyle]="{ width: defense + '%' }"></div>
+                <span class="stat-value">{{ defense }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor de habilidades -->
+    <div class="section-title">Habilidades</div>
+    <div class="moves">
+        <div class="moves-grid">
+            <span *ngFor="let ability of abilities">{{ ability | titlecase }}</span>
+        </div>
+    </div>
+
+    <!-- Contenedor de movimientos -->
+    <div class="section-title">Movimientos</div>
+    <div class="moves">
+        <div class="moves-grid">
+            <span *ngFor="let move of moves">{{ move | titlecase }}</span>
+        </div>
+    </div>
+</div>
+<!-- Botón para cerrar el modal -->
+<div class="footer">
+    <button class="close-button" (click)="closeModal()">Regresar</button>
+</div>

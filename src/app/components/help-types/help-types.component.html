@@ -1,0 +1,17 @@
+<div class="container-help">
+    <div class="tittle">
+      <h1 class="pokemon-title">Tipos de Pokémon</h1>
+    </div>  
+    <div class="card-grid">
+      <mat-card class="card" *ngFor="let tipo of tipos" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>{{ tipo.tipo | titlecase}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="tipo.url" alt="{{ tipo.tipo }}" />
+      </mat-card>
+    </div>
+    <div>
+        <button class="close-button" (click)="cerrarAyuda()">Regresar</button>
+    </div>
+</div>
+  

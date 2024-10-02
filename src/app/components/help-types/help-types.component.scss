@@ -1,0 +1,93 @@
+.container-help {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
+  background-image: url('/assets/img/help-background.png'); /* Imagen de fondo */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  overflow-y: auto; /* Permite desplazamiento vertical */
+  display: flex; /* Flex para organizar el contenido verticalmente */
+  flex-direction: column; /* Organiza en columna */
+  align-items: center; /* Centra los elementos */
+  padding: 20px;
+}
+
+.pokemon-title {
+  text-align: center;
+  width: 100vw;
+  font-size: 3rem; /* Tamaño grande para el título */
+  font-weight: bold; /* Negrita */
+  color: #FFCB05; /* Color de relleno amarillo */
+  text-shadow: -3px -3px 0 #003A70, 3px -3px 0 #003A70, -3px 3px 0 #003A70, 3px 3px 0 #003A70; /* Bordes azules */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin padding */
+}
+
+.card-grid {
+  display: grid; /* Utiliza grid para organizar las tarjetas */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Define columnas responsivas */
+  gap: 20px; /* Espaciado entre tarjetas */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  justify-items: center; /* Centra las tarjetas dentro de cada celda */
+}
+
+/* Ajuste para cada mat-card */
+.card {
+  width: 250px; /* Ancho fijo para cada tarjeta */
+  border: 1px solid #0572d7; /* Borde azul */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  display: flex; /* Flex para organizar el contenido de la tarjeta */
+  flex-direction: column; /* Organiza en columna */
+  justify-content: space-between; /* Espaciado uniforme */
+  align-items: center; /* Centra el contenido */
+}
+
+/* Ajustes específicos para las imágenes */
+.card img {
+  max-width: 100px; /* Ancho máximo de la imagen */
+  height: auto; /* Ajusta la altura automáticamente */
+  object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+}
+
+/* Estilo responsivo */
+@media only screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el número de columnas */
+  }
+
+  .card {
+    width: auto; /* Ajusta el ancho */
+    height: auto; /* Ajusta la altura */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Ajusta el número de columnas */
+  }
+
+  .card {
+    width: auto; /* Ajusta el ancho */
+    height: auto; /* Ajusta la altura */
+  }
+}
+
+.close-button {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}
+
+.close-button:focus {
+  outline: none;
+}

@@ -1,0 +1,135 @@
+.container-Detail {
+  overflow-y: scroll;
+  height: 100vh;
+  padding: 20px;
+}
+
+.header-Detail {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.image-container img {
+  max-width: 350px; /* Tamaño de la imagen */
+  border-radius: 10px;
+}
+
+.pokemon-name {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Estilo para el título de las secciones */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4a90e2;
+  margin: 20px 0 10px;
+  border-bottom: 2px solid #4a90e2;
+  width: fit-content;
+}
+
+/* Estilo para las estadísticas */
+.stat-bar-container {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.stat-bar-container span {
+  width: 80px; /* Establecer un ancho fijo de 80px */
+  display: inline-block; /* Asegurarse de que el span respete el ancho */
+  text-align: left; /* Alinear el texto a la derecha si es necesario */
+}
+
+.stat-bar {
+  position: relative;
+  height: 20px;
+  width: 200px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.attack-bar {
+  background-color: #f44336; /* Color para la barra de ataque */
+}
+
+.defense-bar {
+  background-color: #2196f3; /* Color para la barra de defensa */
+}
+
+.stat-value {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilo para las habilidades */
+.abilities ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.abilities li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Estilo para la cuadrícula de movimientos */
+.moves-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.moves-grid span {
+  background-color: #f1f1f1;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #d32f2f;
+}
+
+.close-button:focus {
+  outline: none;
+}
+

@@ -1,0 +1,145 @@
+.home-container {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  background-image: url('/assets/img/poke-background.jpg'); /* Ruta a la imagen de fondo */
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  display: flex; /* Utiliza flexbox */
+  flex-direction: column; /* Alinea elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  color: white; /* Color del texto */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra para el texto */
+  gap: 0px; /* Espacio entre el logo y el input */
+  overflow-y: scroll;
+  position: relative;
+}
+
+.help-button {
+  position: absolute; /* Posiciona el botón dentro del contenedor */
+  top: 20px; /* Distancia desde la parte superior */
+  right: 20px; /* Distancia desde la parte derecha */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  background-color: #FFCB05; /* Color de fondo amarillo */
+  color: #003A70; /* Color del texto (azul) */
+  border: 4px solid #0572d7; /* Borde de color azul */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  font-size: 1.5rem; /* Tamaño del texto */
+  font-weight: bold; /* Grosor del texto */
+  text-shadow: -1px -1px 0 #003A70, 1px -1px 0 #003A70, -1px 1px 0 #003A70, 1px 1px 0 #003A70; /* Sombra para simular el borde del texto */
+  z-index: 1000; /* Asegura que el botón esté en el frente */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+.help-button:hover {
+  background-color: #FFD700; /* Color de fondo al hacer hover */
+  transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+}
+
+.help-button:active {
+  transform: scale(0.98); /* Reduce el tamaño ligeramente al hacer clic */
+}
+
+.search{
+  height: 30vh;
+}
+
+.pokemon-logo {
+  width: 380px; /* Ajusta el ancho del contenedor del logo */
+  height: 150px; /* Ajusta la altura del logo */
+  background-image: url('/assets/img/pokemon-logo.png'); /* Imagen del logo desde los estilos */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-size: contain; /* Ajusta la imagen dentro del contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  margin-bottom: 0px; /* Reduce el espacio debajo del logo */
+}
+
+.search-container {
+  display: flex; /* Utiliza flexbox para alinear el input y el botón */
+  align-items: center; /* Alinea verticalmente */
+  width: fit-content;
+}
+
+.search-input {
+  width: 300px; /* Ancho inicial del input */
+  max-width: 500px; /* Ancho máximo del input en pantallas grandes */
+  padding: 10px;
+  border: 2px solid #ccc; /* Borde alrededor del input */
+  border-radius: 5px; /* Redondeo de los bordes izquierdo */
+  margin: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para el cuadro de búsqueda */
+  font-size: 1rem;
+  transition: width 0.3s ease-in-out; /* Transición suave del tamaño */
+}
+
+.search-button {
+  margin-left: 5px;
+  padding: 10px 15px; /* Espaciado interno del botón */
+  border: 4px solid #0572d7; /* Borde de color azul */
+  background-color: #FFCB05; /* Color de fondo amarillo */
+  color: #0572d7; /* Color del texto (azul) */
+  font-size: 1rem;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+.search-button:hover {
+  background-color: #FFD700; /* Color de fondo al hacer hover */
+  transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+  border-color: #0056b3; /* Cambia el color del borde al hacer hover */
+}
+
+.search-button:active {
+  transform: scale(0.98); /* Reduce el tamaño ligeramente al hacer clic */
+}
+
+@media only screen and (max-width: 768px) {
+  .home-container {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home-container {
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
+
+  .search-input {
+    width: 250px; /* Ajusta el ancho del input para pantallas pequeñas */
+  }
+}
+
+.pokemon-grid {
+  height: 50vh; 
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Crea columnas dinámicas */
+  gap: 20px; /* Espaciado entre elementos */
+  margin-top: 20px;
+  width: 100%; /* Ajusta el ancho de la cuadrícula */
+  padding: 0 20px;
+  position: relative;
+  max-height: 100%;
+}
+
+.container-detail{
+  display: flex;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 50vh;
+  align-items: center;
+}
+
+.scroll-observer {
+  height: 50px;  /* Altura visible para el observador */
+  width: 100%;   /* Ancho completo */
+  background-color: transparent;  /* Color de fondo para visualizar el área de scroll */
+}
+
+
+

@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  flex-direction: column; /* Alinear el contenido verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  height: 150px; /* Ajusta la altura del card */
+  width: 150px; /* Ajusta el ancho del card */
+  font-size: medium;
+  border-radius: 15px;
+  color: black;
+  margin: 0 auto; /* Centra la tarjeta en su contenedor padre */
+  text-align: center; /* Centra el texto dentro del card */
+  background-color: rgba($color: #eeeded, $alpha: 0.8);
+  border-radius: 15px;
+}
+  
+  .card-title {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    text-align: center; /* Centra el texto */
+    overflow: hidden; /* Oculta el contenido que desborde */
+    text-overflow: ellipsis; /* Muestra "..." si el texto es muy largo */
+    white-space: nowrap; /* Previene saltos de línea */
+  }
+  
+  .card-image {
+    width: auto;
+    height: 100px;
+    object-fit: contain; /* Asegura que la imagen se mantenga dentro del contenedor */
+  }
+  

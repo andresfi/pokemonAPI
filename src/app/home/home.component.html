@@ -1,0 +1,18 @@
+<div class="home-container">
+    <button class="help-button" (click)="mostrarAyuda()" title="Ayuda">?</button>
+    <div class="search">
+      <div class="pokemon-logo"></div>
+    <!-- Contenedor del input y botón de búsqueda -->
+    <div class="search-container">
+      <input type="text" placeholder="Buscar Pokémon por tipo..." class="search-input" #searchInput (keydown.enter)="getPokemons(searchInput.value)"/>
+
+      <button class="search-button" (click)="getPokemons(searchInput.value)">Buscar</button>
+    </div>
+    </div>    
+    <div *ngIf="pokemones.length >= 1" class="pokemon-grid" (scroll)="onScroll($event)" #pokemonList>
+      <app-pokemon *ngFor="let pokemon of pokemones" [data]="pokemon"></app-pokemon>
+    </div>
+    <div *ngIf="pokemones.length == 0 && isFirstConsult">
+      <img src="assets/img/no-pikachu.gif">
+    </div>
+</div>  

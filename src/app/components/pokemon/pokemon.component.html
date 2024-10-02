@@ -1,0 +1,6 @@
+<mat-card class="card" (click)="muestraDetalle()">
+  <mat-card-header>
+    <mat-card-title class="card-title">{{pokemon | titlecase}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="card-image" src="{{urlImage}}" alt="{{pokemon}}">
+</mat-card>
