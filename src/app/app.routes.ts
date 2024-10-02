@@ -17,7 +17,7 @@ export const routes: Routes = [
     },
     { 
       path: '**', 
-      redirectTo: 'home' // Esta ruta debe estar al final
+      redirectTo: 'home'
     }
   ];
   
