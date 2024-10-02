@@ -49,4 +49,4 @@ Esto generará los archivos compilados en la carpeta `dist/`.
 
 - **Video DEMO**: https://youtu.be/LrmtprfCDZ0  
 - **Enlace a repositorio de Github**: https://github.com/andresfi/pokemonAPI.git  
-- **Enlace a una versión en vivo**: https://poke-api-anlopezju.netlify.app/home
+- **Enlace a una versión en vivo**: https://poke-api-anlopezju.netlify.app/
